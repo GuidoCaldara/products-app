@@ -1,0 +1,42 @@
+<div class="container py-5">
+  <h2>See All the products</h2>
+  <a href="/new" class="btn btn-primary">Add a procuct</a>
+  <div class="row">
+    <% @products.each do |product| %>
+      <div class="col-md-3">
+        <div class="product-card">
+          <div class="card-content">
+            <img src="https://via.placeholder.com/300/09f/fff.png">
+            <div class="card-body">
+              <div class="card-title">
+                <h3><%= product.name %></h3>
+                <p><%= product.price %>$</p>
+              </div>
+              <p class="card-tagline"><%= product.description %></p>
+              <p class="card-tagline"><%= product.category.name %></p>
+
+              <div class="card-rating-container">
+                <div>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>(5.0)</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="card-link">
+            <a href="#">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+
+</div>
+
+
